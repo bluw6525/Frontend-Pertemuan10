@@ -12,7 +12,9 @@
     document.addEventListener("DOMContentLoaded", function() {
         const contactForm = document.getElementById("contactForm");
       
-        contactForm.addEventListener("submit", function(event) {      
+        contactForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+      
           const firstname = document.getElementById("firstname").value.trim();
           const email = document.getElementById("email").value.trim();
           const message = document.getElementById("message").value.trim();
@@ -24,7 +26,6 @@
             contactForm.classList.add("was-validated");
             window.location.href = "https://www.whatsapp.com";
           } else {
-            event.preventDefault();
             alert("Please fill out all fields with valid data and agree to the terms before submitting.");
             contactForm.classList.add("was-validated");
           }
