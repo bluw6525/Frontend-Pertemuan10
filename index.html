@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Revife</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bgcolor-tertiary">
+    <nav class="navbar navbar-expand-sm bgcolor-secondary sticky-top">
+      <div class="container-fluid mx-3">
+        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-tree"></i></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center text-md-start">
+            <li class="nav-item">
+              <a class="nav-link text-decoration-underline" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="#" role="button" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h5 class="modal-title" id="subscribeModalLabel">Subscription Plans</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row gy-4">
+                  <div class="col-lg-4 text-center">
+                    <div class="package-card bgcolor-primary p-4 rounded">
+                      <h5 class="fw-bold mb-2">Basic Package</h5>
+                      <p>Enjoy the Monthly plants and Weekly Education with our basic plan.</p>
+                      <p class="display-6 mb-2">$0/month</p>
+                      <button class="btn btn-success mb-2" onclick="showSuccessMessage()">Start the Benefit</button>
+                      <small class="d-block mt-2">No credit card required</small>
+                      <ul class="text-start mt-3">
+                        <li>Access to exclusive content</li>
+                        <li>Personalized tips and tricks</li>
+                        <li>Montly Plants Deliveries</li>
+                        <li class="text-muted text-decoration-line-through">Weekly Tools</li>
+                        <li class="text-muted text-decoration-line-through">Personal Professional Assistance</li>
+                      </ul>
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-4 text-center">
+                    <div class="package-card bgcolor-primary p-4 rounded position-relative">
+                      <h5 class="fw-bold mb-2">Normal Package</h5>
+                      <p>Enjoy all the basic package benefit with weekly tools benefit</p>
+                      <p class="display-6 mb-2">$10/month</p>
+                      <button class="btn btn-success mb-2" onclick="showSuccessMessage()">Start the Benefit</button>
+                      <small class="d-block mt-2">No credit card required</small>
+                      <ul class="text-start mt-3">
+                        <li>Access to exclusive content</li>
+                        <li>Personalized tips and tricks</li>
+                        <li>Montly Plants Deliveries</li>
+                        <li>Weekly Tools</li>
+                        <li class="text-muted text-decoration-line-through">Personal Professional Assistance</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 text-center">
+                    <div class="package-card bgcolor-primary p-4 rounded">
+                      <h5 class="fw-bold mb-2">VIP Package</h5>
+                      <p>Experience the best with our ultimate package subscription plan.</p>
+                      <p class="display-6 mb-2">$20/month</p>
+                      <button class="btn btn-success mb-2" onclick="showSuccessMessage()">Start the Benefit</button>
+                      <small class="d-block mt-2">No credit card required</small>
+                      <ul class="text-start mt-3">
+                        <li>Access to exclusive content</li>
+                        <li>Personalized tips and tricks</li>
+                        <li>Montly Plants Deliveries</li>
+                        <li>Weekly Tools</li>
+                        <li>Personal Professional Assistance</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="container">
+      <div id="successAlert" class="alert alert-success position-fixed top-0 end-0 mt-3 me-3 d-none" style="z-index: 1050;">
+        Subscription successful! Thank you for joining us.
+      </div>
+    </div>    
+
+    <section>
+      <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/main-carousel/img1.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+              <div class="container bg-dark bg-opacity-50 text-white p-4 rounded-3 box d-flex flex-column justify-content-center">
+                <h1>Welcome to Revife</h1>
+                <p>Explore New Hobby, Living and Life-style</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/main-carousel/img2.png" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+              <div class="container bg-dark bg-opacity-50 text-white p-4 rounded-3 box d-flex flex-column justify-content-center">
+                <h1>Discover New Insights</h1>
+                <p>Stay updated with the latest plants trends</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/main-carousel/img3.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+              <div class="container bg-dark bg-opacity-50 text-white p-4 rounded-3 box d-flex flex-column justify-content-center">
+                <h1>Join Our Community</h1>
+                <p>Connect with like-minded individuals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  <section class="py-5 bgcolor-primary">
+    <div class="container">
+      <h2 class="text-center mb-5">What We Offer</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4 g-md-5">
+        <div class="col">
+          <div class="card h-100 border-0 mb-2 mb-md-0">
+            <img src="img/offer/plants.jpg" class="card-img-top" alt="New Plants Every Month">
+            <div class="card-body text-center">
+              <h3 class="card-title">New Plants Every Month</h3>
+              <p class="card-text">Receive a new plant delivered to your doorstep each month, perfect for building your indoor garden.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 mb-2 mb-md-0">
+            <img src="img/offer/tools.png" class="card-img-top" alt="Weekly Maintenance Tools">
+            <div class="card-body text-center">
+              <h3 class="card-title">Weekly Maintenance Tools</h3>
+              <p class="card-text">Get essential tools and supplies for plant care to ensure your plants stay healthy and vibrant.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 mb-2 mb-md-0">
+            <img src="img/offer/education.jpg" class="card-img-top" alt="Weekly Education">
+            <div class="card-body text-center">
+              <h3 class="card-title">Weekly Education</h3>
+              <p class="card-text">Access weekly educational content to improve your gardening skills and learn plant care techniques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bgcolor-primary">
+    <svg viewBox="0 0 1440 280" xmlns="http://www.w3.org/2000/svg">
+      <path fill="var(--tertiary-color)" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,218.7C672,235,768,213,864,186.7C960,160,1056,128,1152,138.7C1248,149,1344,203,1392,229.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-white">
+            <h1 class="fw-bold">Why Choose Us?</h1>
+            <p class="fs-5">
+              With over two decades of dedicated experience in indoor plant care, 
+              we are passionate about helping people around the world cultivate a love for plants. 
+              Our mission is to inspire and empower everyone to nurture their own green spaces, 
+              bringing nature into their lives with confidence and joy. Let us guide you on your 
+              journey to creating a thriving indoor oasis!
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div id="body-carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <img src="img/body-carousel/img (1).jpg" class="d-block w-100" alt="Lifestyle Image 1">
+                  <div class="carousel-overlay">
+                    <h3 class="text-white">Join Us Now</h3>
+                    <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/body-carousel/img (2).jpg" class="d-block w-100" alt="Lifestyle Image 2">
+                  <div class="carousel-overlay">
+                    <h3 class="text-white">Join Us Now</h3>
+                    <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/body-carousel/img (3).jpg" class="d-block w-100" alt="Lifestyle Image 3">
+                  <div class="carousel-overlay">
+                    <h3 class="text-white">Join Us Now</h3>
+                    <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#body-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#body-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+    <div>
+      <svg viewBox="0 0 1440 280" xmlns="http://www.w3.org/2000/svg">
+        <path fill="var(--primary-color)" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,218.7C672,235,768,213,864,186.7C960,160,1056,128,1152,138.7C1248,149,1344,203,1392,229.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+    <section aria-label="Subscribe" class="py-5 bgcolor-primary">
+      <div class="container">
+        <article class="col-md-8 mx-auto">
+          <h2>Contact Us</h2>
+          <h5 class="mb-4">Feel Free To Ask Any Question</h5>
+          <form class="row g-3" id="contactForm" novalidate>
+            <div class="col-12 form-floating">
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                class="form-control bg-light"
+                aria-label="First Name"
+                required
+              />
+              <label for="firstname" class="ms-2">First Name</label>
+            </div>
+            <div class="col-12 form-floating">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control bg-light"
+                aria-label="Email"
+                required
+              />
+              <label for="email" class="ms-2">Email</label>
+            </div>
+            <div>
+              <textarea id="message" class="form-control  bg-light" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="home-checkbox"
+                  required
+                />
+                <label class="form-check-label" for="home-checkbox">
+                  I agree to the
+                  <a href="#" class="color-tertiary text-decoration-underline">Terms & Conditions</a>
+                  and
+                  <a href="#" class="color-tertiary text-decoration-underline">Privacy Policy</a>.
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-outline-dark">Send Message</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>    
+    
+    <footer class="py-3 bgcolor-secondary">
+      <div class="container text-center">
+        <small>
+          <a href="#" class="color-tertiary">Privacy Policy</a> • 
+          <a href="#" class="color-tertiary">Terms & Conditions</a>
+        </small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

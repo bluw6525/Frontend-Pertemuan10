@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --primary-color: #bddbba;
+  --secondary-color: #a4dbbd;
+  --tertiary-color: #183D45;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+.color-secondary {
+  color: var(--secondary-color);
+}
+.color-tertiary {
+  color: var(--tertiary-color);
+}
+
+.bgcolor-primary {
+  background-color: var(--primary-color);
+}
+.bgcolor-secondary {
+  background-color: var(--secondary-color);
+}
+.bgcolor-tertiary {
+  background-color: var(--tertiary-color);
+}
+.bgcolor-gradient {
+  background: linear-gradient(150deg, var(--secondary-color), var(--primary-color));
+}
+
+.text-justify {
+  text-align: justify;
+}
+.min-height {
+  min-height: 250px;
+}
+
+nav {
+  border-bottom: 2px solid var(--tertiary-color);
+}
+.navbar-toggler {
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--tertiary-color);
+}
+.btn-primary:hover {
+  background: transparent !important;
+  border: 1px solid var(--tertiary-color) !important;
+  color: var(--tertiary-color) !important;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#body-carousel .carousel-item img {
+  transition: 0.3s ease-in-out;
+}
+#body-carousel .carousel-item:hover img {
+  opacity: 0.3;
+}
+#body-carousel .carousel-item .carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+}
+#body-carousel .carousel-item:hover .carousel-overlay {
+  opacity: 1;
+}
+#body-carousel .carousel-item .carousel-overlay .btn-outline-primary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+#body-carousel .carousel-item .carousel-overlay .btn-outline-primary:hover {
+  background-color: #ffffff;
+  color: var(--tertiary-color);
+}
+
+.form-control {
+  border: 1px solid var(--tertiary-color);
+}
+
+.form-control:focus {
+  border-color: var(--tertiary-color);
+  box-shadow: 0 0 5px var(--tertiary-color);
+  outline: none;
+}
+
+#contact-checkbox:checked,
+#home-checkbox:checked {
+  background-color: var(--primary-color);
+  border-color: 1px solid var(--primary-color);
+}
+#contact-checkbox:focus,
+#home-checkbox:focus {
+  box-shadow: none;
+}
+
+#contact-link {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  transition: ease 0.5s;
+  background-color: var(--tertiary-color);
+  border: none;
+  max-width: 400px;
+  box-shadow: none;
+}
+#contact-link .face.face1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: var(--primary-color);
+  height: 200px;
+  transition: ease 0.5s;
+  transform: translateY(100px);
+  margin: 0;
+}
+#contact-link:hover .face.face1 {
+  transform: translateY(0);
+}
+#contact-link .face.face1 .content i {
+  font-size: 5rem;
+  color: #fff;
+}
+#contact-link .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-100px);
+  transition: ease 0.5s;
+  margin: 0;
+}
+#contact-link:hover .face.face2 {
+  transform: translateY(0);
+}
+#contact-link .face.face2 h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+#contact-link .face.face2 h3 a {
+  color: #333;
+  text-decoration: none;
+}
+#contact-link .face.face2 h5 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+.no-hover:hover {
+  transform: none;
+  box-shadow: none;
+}
+.scale-hover:hover {
+  transform: scale(1.05);
+}
+
+.box {
+  height: 300px;
+  width: 500px;
+}
+
+@media (max-width: 767.98px) {
+  .box {
+    height: auto; 
+  }
+}
